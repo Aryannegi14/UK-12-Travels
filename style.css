@@ -32,7 +32,10 @@ header {
     z-index: 999;
     height: 100px;
 }
-
+.contact-details a {
+    font-family: Verdana, sans-serif; /* Override font to show lowercase */
+    text-transform: none; /* Prevent uppercase transformation */
+}
 header h1,
 header nav a {
     color: white;
