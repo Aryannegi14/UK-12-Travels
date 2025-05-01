@@ -40,9 +40,16 @@ header nav a {
     text-decoration: none;
 }
 
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header nav a {
     margin: 0 15px;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 /* Main slideshow */
@@ -59,7 +66,7 @@ header nav a {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity  CELLPADDING: 1s ease-in-out;
 }
 
 .slide.active {
@@ -70,10 +77,11 @@ header nav a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .text {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 900;
     color: white;
     text-align: center;
@@ -88,7 +96,6 @@ header nav a {
         2px 2px 0 #000,
         0 0 10px rgba(0, 0, 0, 0.6);
 }
-
 
 /* Section offsets */
 #travels,
@@ -106,18 +113,17 @@ header nav a {
 
 .travels-wrapper {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     gap: 30px;
-    flex-wrap: nowrap;
     min-height: calc(100vh - 140px);
     padding-bottom: 100px;
 }
 
 .travels-content {
     flex: 1;
-    max-width: 50%;
+    max-width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -144,7 +150,8 @@ header nav a {
 }
 
 .small-slideshow {
-    width: 40%;
+    width: 80%;
+    max-width: 600px;
     height: 300px;
     position: relative;
     overflow: hidden;
@@ -153,8 +160,6 @@ header nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 55px;
-    margin-left: 55px;
 }
 
 .small-slideshow .slide {
@@ -173,10 +178,11 @@ header nav a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
-.small-slideshow text{
-    font-size: 6rem;
+.small-slideshow .text {
+    font-size: 3rem;
     font-weight: 900;
     color: white;
     text-align: center;
@@ -191,7 +197,6 @@ header nav a {
         2px 2px 0 #000,
         0 0 10px rgba(0, 0, 0, 0.6);
 }
-
 
 /* Services Section */
 #services {
@@ -229,6 +234,7 @@ header nav a {
     width: 100%;
     height: 150px;
     object-fit: cover;
+    object-position: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -285,34 +291,42 @@ footer {
     }
 
     header h1 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         margin-bottom: 10px;
     }
 
     header nav {
-        display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
-        align-items: center;
     }
 
-    .travels-wrapper {
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 50px;
+    header nav a {
+        font-size: 1.2rem;
+        margin: 0 10px;
+    }
+
+    .text {
+        font-size: 3rem;
     }
 
     .small-slideshow {
         width: 90%;
-        margin: 0 auto 30px;
         height: 250px;
     }
 
+    .small-slideshow .text {
+        font-size: 2rem;
+    }
+
     .travels-content {
-        max-width: 100%;
+        max-width: 90%;
         padding: 0 20px;
-        text-align: center;
         align-items: center;
+        text-align: center;
+    }
+
+    .travels-content h2 {
+        font-size: 2rem;
     }
 
     .services-heading,
@@ -322,34 +336,46 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .text {
-        font-size: 6rem;
-        font-weight: 900;
-        color: white;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-shadow:
-            -2px -2px 0 #000,
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000,
-            0 0 10px rgba(0, 0, 0, 0.6);
+    header {
+        padding: 15px;
     }
-    
 
-    .small-slideshow .text {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+
+    .text {
         font-size: 2rem;
     }
 
+    .small-slideshow {
+        width: 100%;
+        height: 200px;
+    }
+
+    .small-slideshow .text {
+        font-size: 1.5rem;
+    }
+
+    .travels-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .travels-content p {
+        font-size: 1rem;
+    }
+
     .contact-heading {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .contact-details {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .service-image-box {
@@ -357,11 +383,15 @@ footer {
         max-width: 300px;
     }
 
+    .services-heading {
+        font-size: 2rem;
+    }
+
     footer {
         font-size: 0.9rem;
     }
 
     #travels {
-        margin-bottom: 100px;
+        padding: 20px;
     }
 }
