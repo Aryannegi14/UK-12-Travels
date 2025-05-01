@@ -340,6 +340,11 @@ footer {
     }
 
     footer {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 600px) {
+    #travels {
+        margin-bottom: 120px; /* Increase space below travels on small screens */
     }
 }
