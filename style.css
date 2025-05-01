@@ -8,11 +8,11 @@
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Adjusted to account for fixed header */
+    scroll-padding-top: 0;
 }
 
 body {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: "Roboto", sans-serif;
     background: #fff;
     overflow-x: hidden;
     padding-top: 0;
@@ -32,15 +32,11 @@ header {
     z-index: 999;
     height: 100px;
 }
-.contact-details a {
-    font-family: Verdana, sans-serif; /* Override font to show lowercase */
-    text-transform: none; /* Prevent uppercase transformation */
-}
+
 header h1,
 header nav a {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 2rem;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     text-decoration: none;
 }
 
@@ -82,9 +78,10 @@ header nav a {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 3rem;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    font-size: 5rem;
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.7);
     text-align: center;
+    outline-width: 12px ;
 }
 
 /* Section offsets */
@@ -125,13 +122,11 @@ header nav a {
     box-sizing: border-box;
     padding-bottom: 100px; /* Optional: Add some padding at the bottom */
 }
-
 .travels-content p .emphasized-text {
     font-weight: bold;
     color: #222; /* A bit darker than #555 */
     font-size: 1.15rem; /* A bit larger than 1.1rem */
 }
-
 .travels-content {
     flex: 1;
     max-width: 50%;
@@ -202,14 +197,14 @@ header nav a {
 
 /* Services Section */
 #services {
-    min-height: 100vh; /* Changed from height to min-height */
+    height: 100vh;
     padding: 60px 20px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 100px; /* Reduced from 200px */
+    padding-bottom: 200px;
 }
 
 .services-heading {
@@ -274,11 +269,6 @@ header nav a {
     line-height: 2;
 }
 
-.contact-details a {
-    font-family: Verdana, sans-serif; /* Override font to show lowercase */
-    text-transform: none; /* Prevent uppercase transformation */
-}
-
 /* Footer */
 footer {
     padding: 20px;
@@ -286,7 +276,6 @@ footer {
     background: #eee;
     font-size: 1rem;
 }
-
 /* Responsive Styles */
 @media (max-width: 1024px) {
     header {
@@ -323,6 +312,7 @@ footer {
         padding: 0 20px;
         text-align: center;
         align-items: center;
+        font-size: 2rem;
     }
 
     .services-heading,
@@ -345,11 +335,6 @@ footer {
         max-width: 300px;
     }
 
-    .service-image-box img {
-        height: auto; /* Allow height to adjust proportionally */
-        max-height: 150px; /* Prevent images from becoming too tall */
-    }
-
     .contact-details {
         font-size: 1rem;
         padding: 0 20px;
@@ -358,8 +343,9 @@ footer {
     footer {
         font-size: 0.9rem;
     }
-
+}
+@media (max-width: 600px) {
     #travels {
-        margin-bottom: 60px; /* Reduced from 120px */
+        margin-bottom: 120px; /* Increase space below travels on small screens */
     }
 }
