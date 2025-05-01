@@ -8,7 +8,7 @@
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 0;
+    scroll-padding-top: 100px; /* Adjusted to account for fixed header */
 }
 
 body {
@@ -122,11 +122,13 @@ header nav a {
     box-sizing: border-box;
     padding-bottom: 100px; /* Optional: Add some padding at the bottom */
 }
+
 .travels-content p .emphasized-text {
     font-weight: bold;
     color: #222; /* A bit darker than #555 */
     font-size: 1.15rem; /* A bit larger than 1.1rem */
 }
+
 .travels-content {
     flex: 1;
     max-width: 50%;
@@ -197,14 +199,14 @@ header nav a {
 
 /* Services Section */
 #services {
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height */
     padding: 60px 20px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 200px;
+    padding-bottom: 100px; /* Reduced from 200px */
 }
 
 .services-heading {
@@ -269,6 +271,11 @@ header nav a {
     line-height: 2;
 }
 
+.contact-details a {
+    font-family: Verdana, sans-serif; /* Override font to show lowercase */
+    text-transform: none; /* Prevent uppercase transformation */
+}
+
 /* Footer */
 footer {
     padding: 20px;
@@ -276,6 +283,7 @@ footer {
     background: #eee;
     font-size: 1rem;
 }
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
     header {
@@ -321,22 +329,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-     #services {
-        padding-bottom: 80px; /* Reduced bottom padding for small screens */
-    }
-     .services-heading {
-        font-size: 2.2rem; /* Adjust heading size */
-    }
-
-    .service-images-row {
-        flex-direction: column; /* Stack images vertically */
-        align-items: center; /* Center images */
-    }
-
-    .service-image-box {
-        width: 80%; /* Make the boxes smaller to fit on the screen */
-        max-width: 300px; /* Max width for the boxes */
-    }
     .text {
         font-size: 1.5rem;
     }
@@ -344,6 +336,17 @@ footer {
     .small-slideshow .text {
         font-size: 1.3rem;
     }
+
+    .service-image-box {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .service-image-box img {
+        height: auto; /* Allow height to adjust proportionally */
+        max-height: 150px; /* Prevent images from becoming too tall */
+    }
+
     .contact-details {
         font-size: 1rem;
         padding: 0 20px;
@@ -352,9 +355,8 @@ footer {
     footer {
         font-size: 0.9rem;
     }
-}
-@media (max-width: 600px) {
+
     #travels {
-        margin-bottom: 120px; /* Increase space below travels on small screens */
+        margin-bottom: 60px; /* Reduced from 120px */
     }
 }
