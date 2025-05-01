@@ -276,3 +276,70 @@ footer {
     background: #eee;
     font-size: 1rem;
 }
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .travels-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .small-slideshow {
+        width: 90%;
+        margin: 0 auto 30px;
+        height: 250px;
+    }
+
+    .travels-content {
+        max-width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .services-heading,
+    .contact-heading {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .text {
+        font-size: 1.5rem;
+    }
+
+    .small-slideshow .text {
+        font-size: 1.3rem;
+    }
+
+    .service-image-box {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contact-details {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
