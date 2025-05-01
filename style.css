@@ -1,0 +1,278 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 0;
+}
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    background: #fff;
+    overflow-x: hidden;
+    padding-top: 0;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #87CEFA;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    height: 100px;
+}
+
+header h1,
+header nav a {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+
+header nav a {
+    margin: 0 15px;
+    font-size: 1.5rem;
+}
+
+/* Main slideshow */
+.slideshow-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: 100px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    text-align: center;
+}
+
+/* Section offsets */
+#travels,
+#services,
+#contact {
+    scroll-margin-top: 100px;
+}
+
+/* Travels section */
+#travels {
+    background: white;
+    min-height: calc(100vh - 100px);
+    position: relative;
+    top: 0;
+    padding: 20px 60px;
+}
+
+.travels {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: nowrap;
+    min-height: calc(100vh - 140px);
+    box-sizing: border-box;
+}
+
+.travels-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end; /* Align items to the bottom */
+    gap: 30px;
+    flex-wrap: nowrap;
+    min-height: calc(100vh - 140px);
+    box-sizing: border-box;
+    padding-bottom: 100px; /* Optional: Add some padding at the bottom */
+}
+.travels-content p .emphasized-text {
+    font-weight: bold;
+    color: #222; /* A bit darker than #555 */
+    font-size: 1.15rem; /* A bit larger than 1.1rem */
+}
+.travels-content {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 30px; /* Ensure text starts from top */
+}
+
+.travels-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.travels-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Small slideshow in Travels */
+.small-slideshow {
+    width: 40%;
+    flex: 0 0 40%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 55px;
+    margin-left: 55px;
+}
+
+.small-slideshow .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.small-slideshow .slide.active {
+    opacity: 1;
+}
+
+.small-slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small-slideshow .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    text-align: center;
+}
+
+/* Services Section */
+#services {
+    height: 100vh;
+    padding: 60px 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 200px;
+}
+
+.services-heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.service-images-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.service-image-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.service-image-box span {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Contact Section */
+#contact {
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.contact-content {
+    text-align: center;
+    padding: 40px;
+}
+
+.contact-heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-details {
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 2;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #eee;
+    font-size: 1rem;
+}
